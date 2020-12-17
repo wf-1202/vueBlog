@@ -1,5 +1,6 @@
-export const itemList = [
+const vueList = [
   {
+    id: 1,
     img: require("../assets/img/timg.jpg"),
     month: "Jan",
     day: 5,
@@ -140,3 +141,4 @@ export const itemList = [
       "JavaScript 基于原型编程、多范式的动态脚本语言，并且支持面向对象、命令式和声明式（如函数式编程）风格"
   }
 ];
+export default vueList;

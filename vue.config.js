@@ -7,6 +7,6 @@ module.exports = {
    * 如果打算将项目部署到 https://<USERNAME>.github.io/<REPO>/ 上 (即仓库地址为 https://github.com/<USERNAME>/<REPO>)，可将 publicPath 设为 "/<REPO>/"
    */
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/blog-preview' // 当为生产环境时，与仓库名一致
+    ? '/' // 当为生产环境时，与仓库名一致
     : '/'
 }

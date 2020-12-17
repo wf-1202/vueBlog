@@ -74,7 +74,7 @@ export default {
       routes: [
         {
           title: '主页',
-          route: '/blog'
+          route: '/vue'
         },
         {
           title: '文章',

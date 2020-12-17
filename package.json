@@ -12,6 +12,7 @@
     "babel-plugin-component": "^1.1.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
+    "highlight": "^0.2.4",
     "showdown": "^1.9.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
@@ -41,8 +42,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
+      "plugin:vue/essential"
     ],
     "parserOptions": {
       "parser": "babel-eslint"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65883243-bdcb-4b26-a503-7b25063b4397" name="Default Changelist" comment="" />
+    <list default="true" id="6f42f7bc-34c8-4f4b-9def-0f0c0655778f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +10,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lDnulEXHeugjz7t92gh49sBjuP" />
+  <component name="ProjectId" id="1lDnihcTczmilV9TpGOGWE6D3Hs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,6 +21,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="E:\Vue\vue-blog-master\node_modules\prettier" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -39,38 +43,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="65883243-bdcb-4b26-a503-7b25063b4397" name="Default Changelist" comment="" />
-      <created>1607140753772</created>
+      <changelist id="6f42f7bc-34c8-4f4b-9def-0f0c0655778f" name="Default Changelist" comment="" />
+      <created>1607140657900</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607140753772</updated>
-      <workItem from="1607140755057" duration="485000" />
+      <updated>1607140657900</updated>
+      <workItem from="1607140660605" duration="93000" />
     </task>
-    <task id="LOCAL-00001" summary="add">
-      <created>1607140873598</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1607140873599</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1607140864823">
+    <state x="275" y="23" key="#Deployment" timestamp="1607140694842">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140864823" />
-    <state x="467" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607140890711">
+    <state x="275" y="23" key="#Deployment/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140694842" />
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1608198144243">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="467" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140890711" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608198144243" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607140751854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140751854" />
   </component>
 </project>

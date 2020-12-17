@@ -31,7 +31,7 @@ export default {
   created () {
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll, true) // 监听滚动事件
+    // window.addEventListener('scroll', this.handleScroll, true) // 监听滚动事件
   },
   methods: {
     clickItem () {

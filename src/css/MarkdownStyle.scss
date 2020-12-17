@@ -1,7 +1,5 @@
 /**
  * markdown 自定义样式
- * @Author:itmacy
- * @Date:2020/7/22
  */
 /*<--引用样式--!>*/
 blockquote {
@@ -14,14 +12,14 @@ ul li {
 }
 
 /*<--代码样式--!>*/
-pre{
-  background: #F6F6F6 ;
-  overflow: auto;
-}
-code {
-  color:#D34B62 ;
-  border: 1px solid #eee;
-}
+// pre{
+//   background: #F6F6F6 ;
+//   overflow: auto;
+// }
+// code {
+//   color:#D34B62 ;
+//   border: 1px solid #eee;
+// }
 // 表格
 table {
   border-collapse: collapse;
