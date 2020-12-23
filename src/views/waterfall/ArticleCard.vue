@@ -3,10 +3,6 @@
       <div class="item"  @click="clickItem">
         <div class="item1">
           <img class="img" :src="item.img" >
-          <div class="circle">
-            <div class="circleItem1">{{ item.month }}</div>
-            <div class="circleItem2">{{ item.day}}</div>
-          </div>
         </div>
         <div class="item2">
           <div class="title">{{ item.title }}</div>

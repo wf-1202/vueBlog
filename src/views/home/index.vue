@@ -4,7 +4,7 @@
       <router-link to="/vue">Vue</router-link>
       <router-link to="/react">React</router-link>
       <router-link to="/wx">微信小程序</router-link>
-      <router-link to="/css">Css</router-link>
+      <router-link to="/css">CSS</router-link>
     </div>
     <div class="body">
       <div class="banner-wrap">
@@ -18,7 +18,7 @@
             <img class="banner-img" :src="item.img" alt="index" />
           </el-carousel-item>
         </el-carousel>
-        <div class="search">
+        <!-- <div class="search">
           <img
             class="searchIcon"
             src="../../assets/home/search.png"
@@ -33,7 +33,7 @@
             v-model="keyword"
             @change="search"
           />
-        </div>
+        </div> -->
       </div>
       <transition>
         <router-view />

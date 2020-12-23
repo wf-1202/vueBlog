@@ -6,7 +6,6 @@
     right: 0;
     bottom: 0;
     background: white;
-
     transition: all 0.6s;
     opacity: 0;
     -webkit-opacity: 0;

@@ -1,17 +1,5 @@
 <template>
     <div class="zone">
-      <div class="top">
-        <div class="left">
-          <span class="email">
-            <img class="emailImg" src="../../assets/contact/email.png">
-            <span>{{ email }}</span>
-          </span>
-          <span class="desc">Hello,我是{{ author }},欢迎来到我的博客！</span>
-        </div>
-        <div class="right">
-          <SocialContact></SocialContact>
-        </div>
-      </div>
       <MobileSearch class="mobileSearch" @search = "search"></MobileSearch>
       <div class="body">
         <div class="nav">
@@ -45,7 +33,6 @@ export default {
   name: 'Zone',
   components: {
     Author,
-    SocialContact,
     MobileSearch
   },
   mounted () {
@@ -83,14 +70,8 @@ export default {
         {
           title: '时间轴',
           route: '/zone/timeline'
-        },
-        {
-          title: '关于',
-          route: '/zone/about'
         }
-      ],
-      author: 'itmacy',
-      email: '2792889552@qq.com'
+      ]
     }
   },
   methods: {

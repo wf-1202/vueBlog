@@ -1,6 +1,6 @@
 <template>
   <div class="article">
-    <div class="content" v-html="text"></div>
+    <div class="content" v-highlight v-html="text"></div>
     <div class="link" @click="readArticle()">
       <div class="linkItem">
         {{ lastArticle ? "上一篇:" + lastArticle.title : "没有上一篇" }}
@@ -15,7 +15,7 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import { scroll } from "../../data/MarkdownText";
+import { scroll, popup, resize, vantCountDown } from "../../data/MarkdownText";
 
 export default {
   name: "Article",
@@ -41,21 +41,32 @@ export default {
     };
   },
   created() {
-    const markDownText = scroll.text;
-    const converter = new showdown.Converter({
-      parseImgDimensions: true, // 支持从markdown语法中设置图像尺寸
-      simplifiedAutoLink: true, // 自动转为链接形式
-      strikethrough: true, // 语法 ~~strikethrough~~ 解析为 <del>strikethrough</del>
-      tables: true, // 转为表格
-      tablesHeaderId: true,
-      ghCodeBlocks: true, // 支持代码块格式
-      splitAdjacentBlockquotes: true, // 拆分相邻块Quote块
-      openLinksInNewWindow: true, // 链接到新窗口
-      tasklists: true // 支持任务列表
-    });
-    this.text = converter.makeHtml(markDownText);
+    if (this.$route.query.id === 1) {
+      this.getData(scroll);
+    } else if (this.$route.query.id === 2) {
+      this.getData(popup);
+    } else if (this.$route.query.id === 3) {
+      this.getData(resize)
+    }else if (this.$route.query.id === 4) {
+      this.getData(vantCountDown)
+    }
   },
   methods: {
+    getData(type) {
+      const markDownText = type.text;
+      const converter = new showdown.Converter({
+        parseImgDimensions: true, // 支持从markdown语法中设置图像尺寸
+        simplifiedAutoLink: true, // 自动转为链接形式
+        strikethrough: true, // 语法 ~~strikethrough~~ 解析为 <del>strikethrough</del>
+        tables: true, // 转为表格
+        tablesHeaderId: true,
+        ghCodeBlocks: true, // 支持代码块格式
+        splitAdjacentBlockquotes: true, // 拆分相邻块Quote块
+        openLinksInNewWindow: true, // 链接到新窗口
+        tasklists: true // 支持任务列表
+      });
+      this.text = converter.makeHtml(markDownText);
+    },
     readArticle() {
       this.$router.push("/zone/article");
     }

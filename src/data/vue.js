@@ -2,38 +2,30 @@ const vueList = [
   {
     id: 1,
     img: require("../assets/img/timg.jpg"),
-    month: "Jan",
-    day: 5,
     title: "监听页面滚动",
     author: "wf",
     desc: "用于分页加载。相关滚动操作等"
   },
   {
+    id: 2,
     img: require("../assets/img/moon.jpg"),
-    month: "Feb",
-    day: 8,
-    title: "Python",
-    author: "itmacy",
-    desc:
-      "Python是一种跨平台的计算机程序设计语言。 是一个高层次的结合了解释性、编译性、互动性和面向对象的脚本语言。最初被设计用于编写自动化脚本(shell)，随着版本的不断更新和语言新功能的添加，越多被用于独立的、大型项目的开发"
+    title: "监听物理返回",
+    author: "wf",
+    desc: "用于不和原生交互的情况下，H5控制物理返回"
   },
   {
+    id: 3,
     img: require("../assets/img/xjy.jpg"),
-    month: "Mar",
-    day: 10,
-    title: "Groovy",
-    author: "itmacy",
-    desc:
-      "Groovy是一种基于JVM（Java虚拟机）的敏捷开发语言，它结合了Python、Ruby和Smalltalk的许多强大的特性，Groovy 代码能够与 Java 代码很好地结合，也能用于扩展现有代码。由于其运行在 JVM 上的特性，Groovy也可以使用其他非Java语言编写的库"
+    title: "监听键盘弹起",
+    author: "wf",
+    desc: "APP需要文本框输入，弹起键盘时，底部按钮会被顶起来。"
   },
   {
+    id: 4,
     img: require("../assets/img/timg.jpg"),
-    month: "Apr",
-    day: 15,
-    title: "Scala",
-    author: "itmacy",
-    desc:
-      "Scala是一门多范式的编程语言，一种类似java的编程语言 [1]  ，设计初衷是实现可伸缩的语言 [2]  、并集成面向对象编程和函数式编程的各种特性。"
+    title: "Vant组件CountDown",
+    author: "wf",
+    desc: "倒计时组件使用时遇到的问题"
   },
   {
     img: require("../assets/img/fox.jpeg"),

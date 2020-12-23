@@ -8,32 +8,6 @@
         <div class="imgDiv"><img class="img" :src="author.icon"  height="230"/></div>
         <div class="name">{{ author.name }}</div>
       </div>
-      <div class="block">
-        <div class="titleDiv">
-          <div class="titleItem1"></div>
-          <div class="titleItem2">热门博客</div>
-        </div>
-        <div class="article" v-for="(item, index) in hotBlogList" :key="index" @click="readBlog">
-          <div class="articleItem1"><img :src="item.icon"  height="50"/></div>
-          <div class="articleItem2">
-            <div class="title">{{ item.title }}</div>
-            <div class="date">发布日期：{{ item.publishDate }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div>
-          <img src="../../assets/about/bg.jpg" width="90%">
-        </div>
-        <Search class="search" @search="search"></Search>
-      </div>
-      <div class="block">
-        <div class="titleDiv">
-          <div class="titleItem1"></div>
-          <div class="titleItem2">博客分类</div>
-        </div>
-        <div class="type" v-for="(item, index) in blogTypeList" :key="index" @click="getBlogList">{{ item.type }}</div>
-      </div>
     </div>
 </template>
 
@@ -48,7 +22,6 @@ const GET_HEIGHT = 'getHeight'
 export default {
   name: 'Author',
   components: {
-    Search
   },
   mounted () {
     const height = this.$refs.author.offsetHeight // 获取容器高度

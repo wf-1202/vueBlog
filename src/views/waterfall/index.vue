@@ -80,7 +80,7 @@ export default {
     border: 1px dashed #999;
     color: #999;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 20px 0;
   }
 }
 </style>
