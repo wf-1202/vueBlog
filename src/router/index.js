@@ -18,12 +18,12 @@ const routes = [
     children: [
       {
         path: "vue",
-        name: "vue",
+        name: "Vue",
         component: () => import("../views/home/Vue")
       },
       {
         path: "react",
-        name: "react",
+        name: "React",
         component: () => import("../views/home/React")
       }
     ]
@@ -38,9 +38,14 @@ const routes = [
         name: "Article",
         component: () => import("../views/zone/Article")
       },
+      // {
+      //   path: "reactArticle",
+      //   name: "ReactArticle",
+      //   component: () => import("../views/zone/ReactArticle")
+      // },
       {
-        path: "vue",
-        name: "vue",
+        path: "homeVue",
+        name: "HomeVue",
         component: () => import("../views/home/Vue")
       },
       {
@@ -55,7 +60,7 @@ const routes = [
       },
       {
         path: "timeline",
-        name: "TimeLine",
+        name: "Timeline",
         component: () => import("../views/zone/TimeLine")
       }
     ]

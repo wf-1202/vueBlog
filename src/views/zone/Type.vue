@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import itemList from '../../data/data'
+// import itemList from '../../data/data'
 import WaterFall from '../waterfall/'
 import ArticleCard from '../waterfall/ArticleCard'
 
@@ -38,7 +38,7 @@ export default {
     }
   },
   created () {
-    this.itemList = itemList
+    // this.itemList = itemList
   },
   mounted () {
   },

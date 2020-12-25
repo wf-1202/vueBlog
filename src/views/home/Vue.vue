@@ -18,7 +18,7 @@ import WaterFall from "../waterfall/";
 import ArticleCard from "../waterfall/ArticleCard";
 
 export default {
-  name: "vue",
+  name: "Vue",
   components: {
     WaterFall,
     ArticleCard

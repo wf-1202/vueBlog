@@ -30,7 +30,7 @@ import {
 } from "../../data/MarkdownText";
 
 export default {
-  name: "Article",
+  name: "ReactArticle",
   components: { A, Sign },
   watch: {
     $route(to, from) {

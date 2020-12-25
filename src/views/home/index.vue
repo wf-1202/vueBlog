@@ -83,10 +83,10 @@ export default {
       console.log('to:', to)
       console.log('from:', from)
       switch (to.name) {
-        case "Vue":
+        case "vue":
           this.currentPage = "vue";
           break;
-        case "React":
+        case "react":
           this.currentPage = "react";
           break;
       }

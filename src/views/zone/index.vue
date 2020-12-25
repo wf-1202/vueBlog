@@ -10,7 +10,7 @@
         <div class="center">
           <div class="contentDiv">
            <div class="content" ref="content">
-             <router-view/>
+             <router-view />
            </div>
           </div>
           <Author
@@ -36,7 +36,7 @@ export default {
     MobileSearch
   },
   mounted () {
-    // console.log('挂载zone...')
+    console.log('挂载zone...')
     window.addEventListener('scroll', this.handleScroll, true) // 监听滚动事件
     this.contentHeight = this.$refs.content.offsetHeight // 获取内容高度
     this.toTop()

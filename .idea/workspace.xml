@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f42f7bc-34c8-4f4b-9def-0f0c0655778f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,7 @@
       <updated>1607140657900</updated>
       <workItem from="1607140660605" duration="93000" />
       <workItem from="1608198078378" duration="207000" />
+      <workItem from="1608720402577" duration="406000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1608198252505</created>
@@ -60,13 +61,22 @@
       <option name="project" value="LOCAL" />
       <updated>1608198252505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add">
+      <created>1608720434111</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608720434111</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="add" />
     <option name="LAST_COMMIT_MESSAGE" value="add" />
   </component>
@@ -75,21 +85,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Deployment/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140694842" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1608198240616">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1608720429409">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608198240616" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720429409" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607140751854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140751854" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608198269561">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608720443828">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608198269561" />
-    <state x="397" y="155" key="git4idea.merge.GitPullDialog" timestamp="1608198259290">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720443828" />
+    <state x="397" y="155" key="git4idea.merge.GitPullDialog" timestamp="1608720436295">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="397" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608198259290" />
+    <state x="397" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720436295" />
   </component>
 </project>
