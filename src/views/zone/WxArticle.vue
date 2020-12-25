@@ -15,7 +15,7 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import { componentHooks } from "../../data/markDown/reactMarkDown";
+import { chooseDate, scroll } from "../../data/markDown/wxMarkDown";
 
 export default {
   name: "ReactArticle",
@@ -43,9 +43,9 @@ export default {
   mounted() {
     // console.log("load article");
     if (this.$route.query.id === 1) {
-      this.getData(componentHooks);
+      this.getData(chooseDate);
     } else if (this.$route.query.id === 2) {
-      this.getData(popup);
+      this.getData(scroll);
     } else if (this.$route.query.id === 3) {
       this.getData(resize);
     } else if (this.$route.query.id === 4) {

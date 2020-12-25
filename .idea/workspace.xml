@@ -3,6 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="6f42f7bc-34c8-4f4b-9def-0f0c0655778f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/MarkdownText.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/react.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/reactMarkDown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/React.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/React.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/Vue.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/Vue.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/Wx.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/Wx.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/home/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/zone/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/zone/Article.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/zone/ReactArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/zone/ReactArticle.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +65,7 @@
       <workItem from="1607140660605" duration="93000" />
       <workItem from="1608198078378" duration="207000" />
       <workItem from="1608720402577" duration="406000" />
+      <workItem from="1608881267480" duration="683000" />
     </task>
     <task id="LOCAL-00001" summary="add">
       <created>1608198252505</created>
@@ -68,7 +81,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608720434111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add">
+      <created>1608881319124</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608881319124</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,21 +105,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Deployment/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140694842" />
-    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1608720429409">
+    <state x="283" y="0" key="CommitChangelistDialog2" timestamp="1608881309578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720429409" />
+    <state x="283" y="0" key="CommitChangelistDialog2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608881309578" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607140751854">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1607140751854" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608720443828">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608881333251">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720443828" />
-    <state x="397" y="155" key="git4idea.merge.GitPullDialog" timestamp="1608720436295">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608881333251" />
+    <state x="397" y="155" key="git4idea.merge.GitPullDialog" timestamp="1608881321855">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="397" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608720436295" />
+    <state x="397" y="155" key="git4idea.merge.GitPullDialog/0.0.1366.728/1366.0.1920.1040@0.0.1366.728" timestamp="1608881321855" />
   </component>
 </project>

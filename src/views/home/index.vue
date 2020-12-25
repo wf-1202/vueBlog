@@ -80,14 +80,20 @@ export default {
   },
   watch: {
     $route(to, from) {
-      console.log('to:', to)
-      console.log('from:', from)
+      console.log("to:", to);
+      console.log("from:", from);
       switch (to.name) {
         case "vue":
           this.currentPage = "vue";
           break;
         case "react":
           this.currentPage = "react";
+          break;
+        case "wx":
+          this.currentPage = "wx";
+          break;
+        case "css":
+          this.currentPage = "css";
           break;
       }
       console.log("当前页面：", this.currentPage);

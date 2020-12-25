@@ -25,6 +25,16 @@ const routes = [
         path: "react",
         name: "React",
         component: () => import("../views/home/React")
+      },
+      {
+        path: "wx",
+        name: "Wx",
+        component: () => import("../views/home/Wx")
+      },
+      {
+        path: "css",
+        name: "Css",
+        component: () => import("../views/home/Css")
       }
     ]
   },
@@ -38,11 +48,21 @@ const routes = [
         name: "Article",
         component: () => import("../views/zone/Article")
       },
-      // {
-      //   path: "reactArticle",
-      //   name: "ReactArticle",
-      //   component: () => import("../views/zone/ReactArticle")
-      // },
+      {
+        path: "reactArticle",
+        name: "ReactArticle",
+        component: () => import("../views/zone/ReactArticle")
+      },
+      {
+        path: "wxArticle",
+        name: "WxArticle",
+        component: () => import("../views/zone/WxArticle")
+      },
+      {
+        path: "cssArticle",
+        name: "CssArticle",
+        component: () => import("../views/zone/CssArticle")
+      },
       {
         path: "homeVue",
         name: "HomeVue",

@@ -15,7 +15,7 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import { componentHooks } from "../../data/markDown/reactMarkDown";
+import { ellipsis, bgurl, scrollBar, hide } from "../../data/markDown/cssMarkDown";
 
 export default {
   name: "ReactArticle",
@@ -43,13 +43,13 @@ export default {
   mounted() {
     // console.log("load article");
     if (this.$route.query.id === 1) {
-      this.getData(componentHooks);
+      this.getData(ellipsis);
     } else if (this.$route.query.id === 2) {
-      this.getData(popup);
+      this.getData(bgurl);
     } else if (this.$route.query.id === 3) {
-      this.getData(resize);
+      this.getData(scrollBar);
     } else if (this.$route.query.id === 4) {
-      this.getData(vantCountDown);
+      this.getData(hide);
     } else if (this.$route.query.id === 5) {
       this.getData(smsCode);
     } else if (this.$route.query.id === 6) {

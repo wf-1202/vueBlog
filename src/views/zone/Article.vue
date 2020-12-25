@@ -27,7 +27,7 @@ import {
   smsCode,
   sign,
   aboutRouter
-} from "../../data/MarkdownText";
+} from "../../data/markDown/MarkdownText";
 
 export default {
   name: "Article",

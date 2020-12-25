@@ -5,7 +5,7 @@
         v-for="(item, index) in reactList"
         :item="item"
         :key="index"
-        @click="clickCard"
+        @click="clickCard(item)"
       >
       </ArticleCard>
     </WaterFall>
@@ -14,7 +14,7 @@
 
 <script>
 import WaterFall from "../waterfall/";
-import reactList from "../../data/react";
+import reactList from "../../data/data/react";
 import ArticleCard from "../waterfall/ArticleCard";
 
 export default {
@@ -33,10 +33,10 @@ export default {
   },
   methods: {
     loadMore() {
-      this.reactList = this.reactList.concat(this.reactList);
+      // this.reactList = this.reactList.concat(this.reactList);
     },
     clickCard(val) {
-      this.$router.push("/zone/type");
+      this.$router.push({ path: "/zone/reactArticle", query: { id: val.id } });
     }
   }
 };

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import vueList from "../../data/vue";
+import vueList from "../../data/data/vue";
 import WaterFall from "../waterfall/";
 import ArticleCard from "../waterfall/ArticleCard";
 
@@ -43,7 +43,7 @@ export default {
   mounted() {},
   methods: {
     loadMore() {
-      this.vueList = this.vueList.concat(vueList);
+      // this.vueList = this.vueList.concat(vueList);
     },
     clickCard(val) {
       this.$router.push({ path: "/zone/article", query: { id: val.id } });

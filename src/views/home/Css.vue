@@ -2,7 +2,7 @@
   <div class="blog-friend">
     <WaterFall @load-more="loadMore">
       <ArticleCard
-        v-for="(item, index) in wxList"
+        v-for="(item, index) in cssList"
         :item="item"
         :key="index"
         @click="clickCard(item)"
@@ -14,7 +14,7 @@
 
 <script>
 import WaterFall from "../waterfall/";
-import wxList from "../../data/data/wx";
+import cssList from "../../data/data/css";
 import ArticleCard from "../waterfall/ArticleCard";
 
 export default {
@@ -25,18 +25,18 @@ export default {
   },
   data() {
     return {
-      wxList: []
+      cssList: []
     };
   },
   mounted() {
-    this.wxList = wxList;
+    this.cssList = cssList;
   },
   methods: {
     loadMore() {
-      // this.wxList = this.wxList.concat(this.wxList);
+      // this.cssList = this.cssList.concat(this.cssList);
     },
     clickCard(val) {
-      this.$router.push({ path: "/zone/wxArticle", query: { id: val.id } });
+      this.$router.push({ path: "/zone/cssArticle", query: { id: val.id } });
     }
   }
 };
