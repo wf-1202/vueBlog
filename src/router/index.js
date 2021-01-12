@@ -35,6 +35,16 @@ const routes = [
         path: "css",
         name: "Css",
         component: () => import("../views/home/Css")
+      },
+      {
+        path: "question",
+        name: "Question",
+        component: () => import("../views/home/Question")
+      },
+      {
+        path: "methods",
+        name: "Methods",
+        component: () => import("../views/home/Methods")
       }
     ]
   },
@@ -57,6 +67,16 @@ const routes = [
         path: "wxArticle",
         name: "WxArticle",
         component: () => import("../views/zone/WxArticle")
+      },
+      {
+        path: "methodArticle",
+        name: "MethodArticle",
+        component: () => import("../views/zone/MethodArticle")
+      },
+      {
+        path: "questionArticle",
+        name: "QuestionArticle",
+        component: () => import("../views/zone/QuestionArticle")
       },
       {
         path: "cssArticle",

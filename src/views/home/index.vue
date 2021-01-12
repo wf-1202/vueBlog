@@ -5,6 +5,8 @@
       <router-link to="/react">React</router-link>
       <router-link to="/wx">微信小程序</router-link>
       <router-link to="/css">CSS</router-link>
+      <router-link to="/question">Question</router-link>
+      <router-link to="/methods">Methods</router-link>
     </div>
     <div class="body">
       <div class="banner-wrap">
@@ -94,6 +96,12 @@ export default {
           break;
         case "css":
           this.currentPage = "css";
+          break;
+        case "question":
+          this.currentPage = "question";
+          break;
+        case "methods":
+          this.currentPage = "methods";
           break;
       }
       console.log("当前页面：", this.currentPage);
