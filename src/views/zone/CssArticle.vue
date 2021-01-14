@@ -1,6 +1,8 @@
 <template>
   <div class="article">
     <div class="content" v-highlight v-html="text"></div>
+    <WaterDrop v-if="this.$route.query.id === 5"></WaterDrop>
+    <FaultButton v-if="this.$route.query.id === 6"></FaultButton>
     <div class="link" @click="readArticle()">
       <div class="linkItem">
         {{ lastArticle ? "上一篇:" + lastArticle.title : "没有上一篇" }}
@@ -15,11 +17,20 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import { ellipsis, bgurl, scrollBar, hide } from "../../data/markDown/cssMarkDown";
+import WaterDrop from "./css/WaterDrop";
+import FaultButton from "./css/FaultButton";
+import {
+  ellipsis,
+  bgurl,
+  scrollBar,
+  hide,
+  waterDrop,
+  faultButton
+} from "../../data/markDown/cssMarkDown";
 
 export default {
   name: "ReactArticle",
-  components: {},
+  components: { WaterDrop, FaultButton },
   watch: {
     $route(to, from) {
       // 监听路由，解决当组件初始化后，再次进入组件回到回到顶部
@@ -51,9 +62,9 @@ export default {
     } else if (this.$route.query.id === 4) {
       this.getData(hide);
     } else if (this.$route.query.id === 5) {
-      this.getData(smsCode);
+      this.getData(waterDrop);
     } else if (this.$route.query.id === 6) {
-      this.getData(sign);
+      this.getData(faultButton);
     } else if (this.$route.query.id === 7) {
       this.getData(aboutRouter);
     }

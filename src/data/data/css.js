@@ -26,6 +26,20 @@ const cssList = [
     title: "隐藏页面元素",
     author: "wf",
     desc: "隐藏页面元素的几种方式"
+  },
+  {
+    id: 5,
+    img: require("../../assets/img/cssLogo.jpg"),
+    title: "水滴效果",
+    author: "wf",
+    desc: "动态水滴效果"
+  },
+  {
+    id: 6,
+    img: require("../../assets/img/cssLogo.jpg"),
+    title: "故障按钮",
+    author: "wf",
+    desc: "模仿2077网站上的按钮"
   }
 ];
 export default cssList;

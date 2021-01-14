@@ -17,8 +17,8 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import A from "./a";
-import Sign from "./sign";
+import A from "./vue/a";
+import Sign from "./vue/sign";
 import {
   scroll,
   popup,

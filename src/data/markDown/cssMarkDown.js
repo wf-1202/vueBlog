@@ -35,3 +35,9 @@ export const hide = {
     opacity-0: 元素透明度将为 0，但元素仍然存在，绑定的事件仍旧有效仍可触发执行。
     visibility-hidden：元素隐藏，但元素仍旧存在，页面中无法触发该元素的事件。`
 };
+export const waterDrop = {
+  text: "## 水滴效果"
+};
+export const faultButton = {
+  text: "## 故障按钮"
+};
