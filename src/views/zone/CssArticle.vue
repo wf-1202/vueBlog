@@ -3,6 +3,7 @@
     <div class="content" v-highlight v-html="text"></div>
     <WaterDrop v-if="this.$route.query.id === 5"></WaterDrop>
     <FaultButton v-if="this.$route.query.id === 6"></FaultButton>
+    <BorderStyle v-if="this.$route.query.id === 7"></BorderStyle>
     <div class="link" @click="readArticle()">
       <div class="linkItem">
         {{ lastArticle ? "上一篇:" + lastArticle.title : "没有上一篇" }}
@@ -19,24 +20,27 @@
 import showdown from "showdown";
 import WaterDrop from "./css/WaterDrop";
 import FaultButton from "./css/FaultButton";
-import {
-  ellipsis,
-  bgurl,
-  scrollBar,
-  hide,
-  waterDrop,
-  faultButton
-} from "../../data/markDown/cssMarkDown";
+import BorderStyle from "./css/BorderStyle";
+import axios from "axios";
+import { CSSMap } from "@/common/dict.js";
 
 export default {
   name: "ReactArticle",
-  components: { WaterDrop, FaultButton },
+  components: { WaterDrop, FaultButton, BorderStyle },
   watch: {
     $route(to, from) {
       // 监听路由，解决当组件初始化后，再次进入组件回到回到顶部
       console.log("to:", to);
       console.log("文章详情...");
     }
+  },
+  mounted() {
+    let url = CSSMap.get(this.$route.query.id);
+    axios.get(url).then(res => {
+      if (res.status === 200) {
+        this.getData(res.data);
+      }
+    });
   },
   data() {
     return {
@@ -51,27 +55,9 @@ export default {
       }
     };
   },
-  mounted() {
-    // console.log("load article");
-    if (this.$route.query.id === 1) {
-      this.getData(ellipsis);
-    } else if (this.$route.query.id === 2) {
-      this.getData(bgurl);
-    } else if (this.$route.query.id === 3) {
-      this.getData(scrollBar);
-    } else if (this.$route.query.id === 4) {
-      this.getData(hide);
-    } else if (this.$route.query.id === 5) {
-      this.getData(waterDrop);
-    } else if (this.$route.query.id === 6) {
-      this.getData(faultButton);
-    } else if (this.$route.query.id === 7) {
-      this.getData(aboutRouter);
-    }
-  },
   methods: {
     getData(type) {
-      const markDownText = type.text;
+      const markDownText = type;
       const converter = new showdown.Converter({
         parseImgDimensions: true, // 支持从markdown语法中设置图像尺寸
         simplifiedAutoLink: true, // 自动转为链接形式

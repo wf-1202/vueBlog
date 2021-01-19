@@ -40,6 +40,20 @@ const cssList = [
     title: "故障按钮",
     author: "wf",
     desc: "模仿2077网站上的按钮"
-  }
+  },
+  {
+    id: 7,
+    img: require("../../assets/img/cssLogo.jpg"),
+    title: "边框效果",
+    author: "wf",
+    desc: "边框效果学习"
+  },
+  // {
+  //   id: 8,
+  //   img: require("../../assets/img/cssLogo.jpg"),
+  //   title: "渐变 linear-gradient",
+  //   author: "wf",
+  //   desc: "linear-gradient真强大~"
+  // }
 ];
 export default cssList;

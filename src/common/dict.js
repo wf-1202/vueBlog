@@ -1,0 +1,10 @@
+const CSSMap = new Map();
+CSSMap.set(1, "/CSSMarkdown/ellipsis.md");
+CSSMap.set(2, "/CSSMarkdown/bgUrl.md");
+CSSMap.set(3, "/CSSMarkdown/scrollBar.md");
+CSSMap.set(4, "/CSSMarkdown/hide.md");
+CSSMap.set(5, "/CSSMarkdown/waterDrop.md");
+CSSMap.set(6, "/CSSMarkdown/faultButton.md");
+CSSMap.set(7, "/CSSMarkdown/borderStyle.md");
+// CSSMap.set(8, "/CSSMarkdown/linearGradient.md");
+export { CSSMap };

@@ -17,6 +17,7 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
+import axios from "axios";
 import A from "./vue/a";
 import Sign from "./vue/sign";
 import {
