@@ -75,7 +75,7 @@ export default {
           img: require("../../assets/home/banner2.jpg")
         },
         {
-          img: require("../../assets/home/banner3.png")
+          img: require("../../assets/home/banner3.jpg")
         }
       ]
     };
