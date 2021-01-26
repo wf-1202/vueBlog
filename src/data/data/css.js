@@ -48,12 +48,12 @@ const cssList = [
     author: "wf",
     desc: "边框效果学习"
   },
-  // {
-  //   id: 8,
-  //   img: require("../../assets/img/cssLogo.jpg"),
-  //   title: "渐变 linear-gradient",
-  //   author: "wf",
-  //   desc: "linear-gradient真强大~"
-  // }
+  {
+    id: 8,
+    img: require("../../assets/img/cssLogo.jpg"),
+    title: "range切换图片效果",
+    author: "wf",
+    desc: ""
+  }
 ];
 export default cssList;

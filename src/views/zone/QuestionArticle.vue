@@ -15,7 +15,8 @@
 <script>
 // 参考：https://github.com/showdownjs/showdown
 import showdown from "showdown";
-import { newDate, scroll } from "../../data/markDown/questionMarkdown";
+import axios from "axios";
+import { QuestionMap } from "@/common/dict.js";
 
 export default {
   name: "ReactArticle",
@@ -41,26 +42,16 @@ export default {
     };
   },
   mounted() {
-    // console.log("load article");
-    if (this.$route.query.id === 1) {
-      this.getData(newDate);
-    } else if (this.$route.query.id === 2) {
-      this.getData(scroll);
-    } else if (this.$route.query.id === 3) {
-      this.getData(scrollBar);
-    } else if (this.$route.query.id === 4) {
-      this.getData(hide);
-    } else if (this.$route.query.id === 5) {
-      this.getData(smsCode);
-    } else if (this.$route.query.id === 6) {
-      this.getData(sign);
-    } else if (this.$route.query.id === 7) {
-      this.getData(aboutRouter);
-    }
+    let url = QuestionMap.get(this.$route.query.id);
+    axios.get(url).then(res => {
+      if (res.status === 200) {
+        this.getData(res.data);
+      }
+    });
   },
   methods: {
     getData(type) {
-      const markDownText = type.text;
+      const markDownText = type;
       const converter = new showdown.Converter({
         parseImgDimensions: true, // 支持从markdown语法中设置图像尺寸
         simplifiedAutoLink: true, // 自动转为链接形式

@@ -4,6 +4,7 @@
     <WaterDrop v-if="this.$route.query.id === 5"></WaterDrop>
     <FaultButton v-if="this.$route.query.id === 6"></FaultButton>
     <BorderStyle v-if="this.$route.query.id === 7"></BorderStyle>
+    <Range v-if="this.$route.query.id === 8"></Range>
     <div class="link" @click="readArticle()">
       <div class="linkItem">
         {{ lastArticle ? "上一篇:" + lastArticle.title : "没有上一篇" }}
@@ -21,12 +22,13 @@ import showdown from "showdown";
 import WaterDrop from "./css/WaterDrop";
 import FaultButton from "./css/FaultButton";
 import BorderStyle from "./css/BorderStyle";
+import Range from "./css/Range";
 import axios from "axios";
 import { CSSMap } from "@/common/dict.js";
 
 export default {
   name: "ReactArticle",
-  components: { WaterDrop, FaultButton, BorderStyle },
+  components: { WaterDrop, FaultButton, BorderStyle, Range },
   watch: {
     $route(to, from) {
       // 监听路由，解决当组件初始化后，再次进入组件回到回到顶部
