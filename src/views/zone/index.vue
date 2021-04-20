@@ -167,9 +167,6 @@ export default {
           margin-bottom: -3px; /* 让图标和文章对齐 */
         }
       }
-      .desc{}
-    }
-    .right{
     }
   }
   .body{
