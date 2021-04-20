@@ -85,22 +85,22 @@ export default {
       console.log("to:", to);
       console.log("from:", from);
       switch (to.name) {
-        case "vue":
+        case "Vue":
           this.currentPage = "vue";
           break;
-        case "react":
+        case "React":
           this.currentPage = "react";
           break;
-        case "wx":
+        case "Wx":
           this.currentPage = "wx";
           break;
-        case "css":
+        case "Css":
           this.currentPage = "css";
           break;
-        case "question":
+        case "Question":
           this.currentPage = "question";
           break;
-        case "methods":
+        case "Methods":
           this.currentPage = "methods";
           break;
       }

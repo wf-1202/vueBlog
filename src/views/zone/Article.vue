@@ -42,18 +42,26 @@ export default {
       nextArticle: {
         id: "789456",
         title: "我不知道"
-      }
+      },
+      id: 0
     };
   },
   mounted() {
-    let url = VueMap.get(this.$route.query.id);
-    axios.get(url).then(res => {
-      if (res.status === 200) {
-        this.getData(res.data);
-      }
-    });
+    this.getId();
+    this.show();
   },
   methods: {
+    getId() {
+      this.id = this.$route.query.id;
+    },
+    show() {
+      let url = VueMap[this.id];
+      axios.get(url).then(res => {
+        if (res.status === 200) {
+          this.getData(res.data);
+        }
+      });
+    },
     getData(type) {
       const markDownText = type;
       const converter = new showdown.Converter({

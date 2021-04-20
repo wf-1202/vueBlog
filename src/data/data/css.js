@@ -54,6 +54,13 @@ const cssList = [
     title: "range切换图片效果",
     author: "wf",
     desc: ""
+  },
+  {
+    id: 9,
+    img: require("../../assets/img/cssLogo.jpg"),
+    title: "圆形线条倒数特效",
+    author: "wf",
+    desc: ""
   }
 ];
 export default cssList;

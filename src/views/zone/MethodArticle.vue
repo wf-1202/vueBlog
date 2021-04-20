@@ -42,7 +42,7 @@ export default {
     };
   },
   mounted() {
-    let url = MethodsMap.get(this.$route.query.id);
+    let url = MethodsMap[this.$route.query.id];
     axios.get(url).then(res => {
       if (res.status === 200) {
         this.getData(res.data);
