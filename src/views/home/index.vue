@@ -127,12 +127,13 @@ export default {
   .nav {
     padding: 20px;
     a {
+      display: inline-block;
+      line-height: 30px;
       font-size: 16px;
       font-weight: bold;
       color: #2c3e50;
       padding: 0 5%;
       text-decoration: none;
-
       &.router-link-exact-active {
         color: #58bcb3;
       }
@@ -150,7 +151,7 @@ export default {
     margin-bottom: 20px;
     .banner-img {
       width: 100%;
-      height: 500px;
+      // height: 500px;
     }
   }
   .swiper {

@@ -1,11 +1,11 @@
 <template>
   <div class="blog-article">
-    <WaterFall @load-more ="loadMore">
+    <WaterFall @load-more="loadMore">
       <ArticleCard
         v-for="(item, index) in itemList"
         :item="item"
         :key="index"
-        @click="clickCard"
+        @click="clickCard(item)"
       >
       </ArticleCard>
     </WaterFall>
@@ -13,46 +13,54 @@
 </template>
 
 <script>
-// import itemList from '../../data/data'
-import WaterFall from '../waterfall/'
-import ArticleCard from '../waterfall/ArticleCard'
+import {
+  cssList,
+  methodList,
+  questionList,
+  reactList,
+  vueList,
+  wxList,
+} from "../../data/allData";
+import WaterFall from "../waterfall/";
+import ArticleCard from "../waterfall/ArticleCard";
 
 export default {
-  name: 'Type',
+  name: "Type",
   components: {
     WaterFall,
-    ArticleCard
+    ArticleCard,
   },
-  data () {
+  data() {
     return {
-      itemList: [
-        {
-          img: require('../../assets/img/timg.jpg'),
-          month: 'Jan',
-          day: 5,
-          title: 'Java',
-          author: 'itmacy',
-          desc: 'Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点.'
-        }
-      ]
-    }
+      itemList: [],
+    };
   },
-  created () {
-    // this.itemList = itemList
+  created() {
+    let arr = [];
+    arr = arr
+      .concat(cssList)
+      .concat(methodList)
+      .concat(questionList)
+      .concat(reactList)
+      .concat(vueList)
+      .concat(wxList);
+    this.itemList = arr.filter((e) => {
+      return e.type == this.$route.query.type;
+    });
   },
-  mounted () {
-  },
+  mounted() {},
   methods: {
-    loadMore () {
-      this.itemList = this.itemList.concat(itemList)
+    loadMore() {
+      this.itemList = this.itemList.concat(itemList);
     },
-    clickCard (val) {
-      this.$router.push('/zone/article')
-    }
-  }
-}
+    clickCard(val) {
+      this.$router.push({
+        path: "/zone/article",
+        query: { id: val.id, type: val.type },
+      });
+    },
+  },
+};
 </script>
 
-<style scoped lang = "scss">
-
-</style>
+<style scoped lang="scss"></style>

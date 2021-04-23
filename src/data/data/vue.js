@@ -1,6 +1,7 @@
 const vueList = [
   {
     id: 1,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "监听页面滚动",
     author: "wf",
@@ -8,6 +9,7 @@ const vueList = [
   },
   {
     id: 2,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "监听物理返回",
     author: "wf",
@@ -15,6 +17,7 @@ const vueList = [
   },
   {
     id: 3,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "监听键盘弹起",
     author: "wf",
@@ -22,6 +25,7 @@ const vueList = [
   },
   {
     id: 4,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "Vant组件CountDown",
     author: "wf",
@@ -29,6 +33,7 @@ const vueList = [
   },
   {
     id: 5,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "花里胡哨的验证码",
     author: "wf",
@@ -36,6 +41,7 @@ const vueList = [
   },
   {
     id: 6,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "canvas手写签名 ",
     author: "wf",
@@ -43,10 +49,11 @@ const vueList = [
   },
   {
     id: 7,
+    type: "vue",
     img: require("../../assets/img/vueLogo.jpg"),
     title: "路由问题 ",
     author: "wf",
     desc: "路由返回参数问题"
-  },
+  }
 ];
 export default vueList;

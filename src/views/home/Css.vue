@@ -21,11 +21,11 @@ export default {
   name: "BlogFriend",
   components: {
     WaterFall,
-    ArticleCard
+    ArticleCard,
   },
   data() {
     return {
-      cssList: []
+      cssList: [],
     };
   },
   mounted() {
@@ -36,9 +36,12 @@ export default {
       // this.cssList = this.cssList.concat(this.cssList);
     },
     clickCard(val) {
-      this.$router.push({ path: "/zone/cssArticle", query: { id: val.id } });
-    }
-  }
+      this.$router.push({
+        path: "/zone/cssArticle",
+        query: { id: val.id, type: val.type },
+      });
+    },
+  },
 };
 </script>
 

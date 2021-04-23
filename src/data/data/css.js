@@ -1,6 +1,7 @@
 const cssList = [
   {
     id: 1,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "多行省略",
     author: "wf",
@@ -8,6 +9,7 @@ const cssList = [
   },
   {
     id: 2,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "图片当背景时大小",
     author: "wf",
@@ -15,6 +17,7 @@ const cssList = [
   },
   {
     id: 3,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "滚动条样式",
     author: "wf",
@@ -22,6 +25,7 @@ const cssList = [
   },
   {
     id: 4,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "隐藏页面元素",
     author: "wf",
@@ -29,6 +33,7 @@ const cssList = [
   },
   {
     id: 5,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "水滴效果",
     author: "wf",
@@ -36,6 +41,7 @@ const cssList = [
   },
   {
     id: 6,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "故障按钮",
     author: "wf",
@@ -43,6 +49,7 @@ const cssList = [
   },
   {
     id: 7,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "边框效果",
     author: "wf",
@@ -50,6 +57,7 @@ const cssList = [
   },
   {
     id: 8,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "range切换图片效果",
     author: "wf",
@@ -57,6 +65,7 @@ const cssList = [
   },
   {
     id: 9,
+    type: "css",
     img: require("../../assets/img/cssLogo.jpg"),
     title: "圆形线条倒数特效",
     author: "wf",

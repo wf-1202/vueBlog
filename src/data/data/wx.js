@@ -1,6 +1,7 @@
 const wxList = [
     {
       id: 1,
+      type:'wx',
       img: require("../../assets/img/wxLogo.jpg"),
       title: "日期选择组件",
       author: "wf",
@@ -8,6 +9,7 @@ const wxList = [
     },
     {
       id: 2,
+      type:'wx',
       img: require("../../assets/img/wxLogo.jpg"),
       title: "页面在IOS无法滚动问题",
       author: "wf",

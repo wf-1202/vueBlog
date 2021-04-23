@@ -21,11 +21,11 @@ export default {
   name: "React",
   components: {
     WaterFall,
-    ArticleCard
+    ArticleCard,
   },
   data() {
     return {
-      methodList: []
+      methodList: [],
     };
   },
   mounted() {
@@ -36,9 +36,12 @@ export default {
       // this.reactList = this.reactList.concat(this.reactList);
     },
     clickCard(val) {
-      this.$router.push({ path: "/zone/methodArticle", query: { id: val.id } });
-    }
-  }
+      this.$router.push({
+        path: "/zone/methodArticle",
+        query: { id: val.id, type: val.type },
+      });
+    },
+  },
 };
 </script>
 

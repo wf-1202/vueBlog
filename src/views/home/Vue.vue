@@ -21,7 +21,7 @@ export default {
   name: "Vue",
   components: {
     WaterFall,
-    ArticleCard
+    ArticleCard,
   },
   data() {
     return {
@@ -32,9 +32,9 @@ export default {
           day: 5,
           title: "Java",
           author: "itmacy",
-          desc: "Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点."
-        }
-      ]
+          desc: "Java是一门面向对象编程语言，不仅吸收了C++语言的各种优点.",
+        },
+      ],
     };
   },
   created() {
@@ -46,9 +46,12 @@ export default {
       // this.vueList = this.vueList.concat(vueList);
     },
     clickCard(val) {
-      this.$router.push({ path: "/zone/article", query: { id: val.id } });
-    }
-  }
+      this.$router.push({
+        path: "/zone/article",
+        query: { id: val.id, type: val.type },
+      });
+    },
+  },
 };
 </script>
 
