@@ -37,7 +37,7 @@ export default {
     },
     clickCard(val) {
       this.$router.push({
-        path: "/zone/questionArticle",
+        path: "/zone/article",
         query: { id: val.id, type: val.type },
       });
     },

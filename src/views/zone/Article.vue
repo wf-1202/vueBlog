@@ -20,7 +20,14 @@ import showdown from "showdown";
 import axios from "axios";
 import A from "./vue/a";
 import Sign from "./vue/sign";
-import { VueMap } from "@/common/dict.js";
+import {
+  CSSMap,
+  VueMap,
+  ReactMap,
+  WxMap,
+  QuestionMap,
+  MethodsMap,
+} from "@/common/dict.js";
 
 export default {
   name: "Article",
@@ -30,33 +37,46 @@ export default {
       // 监听路由，解决当组件初始化后，再次进入组件回到回到顶部
       console.log("to:", to);
       console.log("文章详情...");
-    }
+    },
   },
   data() {
     return {
       text: "",
       lastArticle: {
         id: "654321",
-        title: "你知道？"
+        title: "你知道？",
       },
       nextArticle: {
         id: "789456",
-        title: "我不知道"
+        title: "我不知道",
       },
-      id: 0
+      id: 0,
+      articleData: {}, // 文章数据
     };
   },
   mounted() {
-    this.getId();
+    this.getClassification();
     this.show();
   },
   methods: {
-    getId() {
-      this.id = this.$route.query.id;
+    // 获取首页文章分类
+    getClassification() {
+      let type = this.$route.query.type;
+      let list = {
+        css: CSSMap,
+        vue: VueMap,
+        react: ReactMap,
+        wx: WxMap,
+        question: QuestionMap,
+        method: MethodsMap,
+      };
+      // 获取markdown地址
+      this.articleData = list[type][this.$route.query.id];
     },
     show() {
-      let url = VueMap[this.id];
-      axios.get(url).then(res => {
+      // 拿到markdown数据
+      let url = this.articleData;
+      axios.get(url).then((res) => {
         if (res.status === 200) {
           this.getData(res.data);
         }
@@ -73,14 +93,14 @@ export default {
         ghCodeBlocks: true, // 支持代码块格式
         splitAdjacentBlockquotes: true, // 拆分相邻块Quote块
         openLinksInNewWindow: true, // 链接到新窗口
-        tasklists: true // 支持任务列表
+        tasklists: true, // 支持任务列表
       });
       this.text = converter.makeHtml(markDownText);
     },
     readArticle() {
       this.$router.push("/zone/article");
-    }
-  }
+    },
+  },
 };
 </script>
 
