@@ -1,8 +1,21 @@
 <template>
   <div class="article">
     <div class="content" v-highlight v-html="text"></div>
-    <A v-show="this.$route.query.id === 5"></A>
-    <Sign v-show="this.$route.query.id === 6"></Sign>
+    <A v-show="this.$route.query.id === 5 && this.$route.query.type == 'vue'"></A>
+    <Sign v-show="this.$route.query.id === 6 && this.$route.query.type == 'vue'"></Sign>
+    <WaterDrop
+      v-show="this.$route.query.id === 5 && this.$route.query.type == 'css'"
+    ></WaterDrop>
+    <FaultButton
+      v-show="this.$route.query.id === 6 && this.$route.query.type == 'css'"
+    ></FaultButton>
+    <BorderStyle
+      v-show="this.$route.query.id === 7 && this.$route.query.type == 'css'"
+    ></BorderStyle>
+    <Range v-show="this.$route.query.id === 8 && this.$route.query.type == 'css'"></Range>
+    <CountDown
+      v-show="this.$route.query.id === 9 && this.$route.query.type == 'css'"
+    ></CountDown>
     <div class="link">
       <div class="linkItem" @click="readArticle('last')">
         {{ "上一篇:" + lastArticle.title }}
@@ -36,10 +49,23 @@ import {
   vueList,
   wxList,
 } from "@/data/allData.js";
+import BorderStyle from "./css/BorderStyle";
+import CountDown from "./css/CountDown";
+import FaultButton from "./css/FaultButton";
+import Range from "./css/Range";
+import WaterDrop from "./css/WaterDrop";
 
 export default {
   name: "Article",
-  components: { A, Sign },
+  components: {
+    A,
+    Sign,
+    BorderStyle,
+    CountDown,
+    FaultButton,
+    Range,
+    WaterDrop,
+  },
   watch: {
     $route(to, from) {
       // 1.监听路由，解决当组件初始化后，再次进入组件回到回到顶部
