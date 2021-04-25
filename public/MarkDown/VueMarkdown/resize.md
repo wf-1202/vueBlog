@@ -1,4 +1,4 @@
-## 监听键盘谈起
+## 监听键盘弹起
 
 ```javascript
 let height = document.body.clientHeight; // 页面高度

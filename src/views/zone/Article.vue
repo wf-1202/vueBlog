@@ -3,12 +3,12 @@
     <div class="content" v-highlight v-html="text"></div>
     <A v-show="this.$route.query.id === 5"></A>
     <Sign v-show="this.$route.query.id === 6"></Sign>
-    <div class="link" @click="readArticle()">
-      <div class="linkItem">
-        {{ lastArticle ? "上一篇:" + lastArticle.title : "没有上一篇" }}
+    <div class="link">
+      <div class="linkItem" @click="readArticle('last')">
+        {{ "上一篇:" + lastArticle.title }}
       </div>
-      <div class="linkItem right" @click="readArticle()">
-        {{ nextArticle ? "下一篇:" + nextArticle.title : "没有下一篇" }}
+      <div class="linkItem right" @click="readArticle('next')">
+        {{ "下一篇:" + nextArticle.title }}
       </div>
     </div>
   </div>
@@ -28,13 +28,25 @@ import {
   QuestionMap,
   MethodsMap,
 } from "@/common/dict.js";
+import {
+  cssList,
+  methodList,
+  questionList,
+  reactList,
+  vueList,
+  wxList,
+} from "@/data/allData.js";
 
 export default {
   name: "Article",
   components: { A, Sign },
   watch: {
     $route(to, from) {
-      // 监听路由，解决当组件初始化后，再次进入组件回到回到顶部
+      // 1.监听路由，解决当组件初始化后，再次进入组件回到回到顶部
+      // 2.点击上/下篇文章跳转时，通过监听路由，来达到url不变，参数改变时，页面数据重新请求
+      this.getClassification();
+      this.show();
+      this.getArticleTitle();
       console.log("to:", to);
       console.log("文章详情...");
     },
@@ -44,19 +56,21 @@ export default {
       text: "",
       lastArticle: {
         id: "654321",
-        title: "你知道？",
+        title: "没有上一篇",
       },
       nextArticle: {
         id: "789456",
-        title: "我不知道",
+        title: "没有下一篇",
       },
       id: 0,
       articleData: {}, // 文章数据
+      articleTitleList: [], // 获取文章标题
     };
   },
   mounted() {
     this.getClassification();
     this.show();
+    this.getArticleTitle();
   },
   methods: {
     // 获取首页文章分类
@@ -82,6 +96,34 @@ export default {
         }
       });
     },
+    // 获取文章标题，用于跳转上/下篇文章
+    getArticleTitle() {
+      let id = this.$route.query.id;
+      let type = this.$route.query.type;
+      let articleList = {
+        css: cssList,
+        vue: vueList,
+        react: reactList,
+        wx: wxList,
+        question: questionList,
+        method: methodList,
+      };
+      this.articleTitleList = articleList[type];
+      this.articleTitleList.map((item, index) => {
+        if (id == 1) {
+          this.lastArticle.title = "没有上一篇";
+          this.nextArticle.title = this.articleTitleList[1].title;
+        } else if (id == this.articleTitleList.length) {
+          this.lastArticle.title = this.articleTitleList[
+            this.articleTitleList.length - 1
+          ].title;
+          this.nextArticle.title = "没有下一篇";
+        } else {
+          this.lastArticle.title = this.articleTitleList[id - 2].title;
+          this.nextArticle.title = this.articleTitleList[id].title;
+        }
+      });
+    },
     getData(type) {
       const markDownText = type;
       const converter = new showdown.Converter({
@@ -97,8 +139,20 @@ export default {
       });
       this.text = converter.makeHtml(markDownText);
     },
-    readArticle() {
-      this.$router.push("/zone/article");
+    readArticle(param) {
+      let id = this.$route.query.id;
+      let type = this.$route.query.type;
+      if (id == 1 && param == "last") {
+        return;
+      } else if (id == this.articleTitleList.length && param == "next") {
+        return;
+      } else {
+        param == "last" ? (id -= 1) : (id += 1);
+        this.$router.push({
+          path: "/zone/article",
+          query: { id: id, type: type },
+        });
+      }
     },
   },
 };
