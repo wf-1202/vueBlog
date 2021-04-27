@@ -40,6 +40,7 @@ import {
   WxMap,
   QuestionMap,
   MethodsMap,
+  LeetCodeMap,
 } from "@/common/dict.js";
 import {
   cssList,
@@ -48,6 +49,7 @@ import {
   reactList,
   vueList,
   wxList,
+  leetCodeList,
 } from "@/data/allData.js";
 import BorderStyle from "./css/BorderStyle";
 import CountDown from "./css/CountDown";
@@ -109,6 +111,7 @@ export default {
         wx: WxMap,
         question: QuestionMap,
         method: MethodsMap,
+        leetCode: LeetCodeMap,
       };
       // 获取markdown地址
       this.articleData = list[type][this.$route.query.id];
@@ -133,6 +136,7 @@ export default {
         wx: wxList,
         question: questionList,
         method: methodList,
+        leetCode: leetCodeList,
       };
       this.articleTitleList = articleList[type];
       this.articleTitleList.map((item, index) => {

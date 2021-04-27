@@ -1,8 +1,8 @@
 <template>
-  <div class="blog-article">
+  <div class="blog-friend">
     <WaterFall @load-more="loadMore">
       <ArticleCard
-        v-for="(item, index) in itemList"
+        v-for="(item, index) in leetCode"
         :item="item"
         :key="index"
         @click="clickCard(item)"
@@ -13,47 +13,27 @@
 </template>
 
 <script>
-import {
-  cssList,
-  methodList,
-  questionList,
-  reactList,
-  vueList,
-  wxList,
-  leetCodeList,
-} from "../../data/allData";
 import WaterFall from "../waterfall/";
+import leetCode from "../../data/data/leetCode";
 import ArticleCard from "../waterfall/ArticleCard";
 
 export default {
-  name: "Type",
+  name: "BlogFriend",
   components: {
     WaterFall,
     ArticleCard,
   },
   data() {
     return {
-      itemList: [],
+      leetCode: [],
     };
   },
-  created() {
-    let arr = [];
-    arr = arr
-      .concat(cssList)
-      .concat(methodList)
-      .concat(questionList)
-      .concat(reactList)
-      .concat(vueList)
-      .concat(wxList)
-      .concat(leetCodeList);
-    this.itemList = arr.filter((e) => {
-      return e.type == this.$route.query.type;
-    });
+  mounted() {
+    this.leetCode = leetCode;
   },
-  mounted() {},
   methods: {
     loadMore() {
-      this.itemList = this.itemList.concat(itemList);
+      // this.leetCode = this.leetCode.concat(this.leetCode);
     },
     clickCard(val) {
       this.$router.push({

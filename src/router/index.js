@@ -45,6 +45,11 @@ const routes = [
         path: "methods",
         name: "Methods",
         component: () => import("../views/home/Methods")
+      },
+      {
+        path: "leetCode",
+        name: "LeetCode",
+        component: () => import("../views/home/LeetCode")
       }
     ]
   },
@@ -58,31 +63,6 @@ const routes = [
         name: "Article",
         component: () => import("../views/zone/Article")
       },
-      // {
-      //   path: "reactArticle",
-      //   name: "ReactArticle",
-      //   component: () => import("../views/zone/ReactArticle")
-      // },
-      // {
-      //   path: "wxArticle",
-      //   name: "WxArticle",
-      //   component: () => import("../views/zone/WxArticle")
-      // },
-      // {
-      //   path: "methodArticle",
-      //   name: "MethodArticle",
-      //   component: () => import("../views/zone/MethodArticle")
-      // },
-      // {
-      //   path: "questionArticle",
-      //   name: "QuestionArticle",
-      //   component: () => import("../views/zone/QuestionArticle")
-      // },
-      // {
-      //   path: "cssArticle",
-      //   name: "CssArticle",
-      //   component: () => import("../views/zone/CssArticle")
-      // },
       {
         path: "homeVue",
         name: "HomeVue",

@@ -67,4 +67,24 @@ const MethodsMap = {
   1: "/MarkDown/MethodsMarkdown/storage.md",
   2: "/MarkDown/MethodsMarkdown/scroll.md"
 };
-export { CSSMap, VueMap, ReactMap, WxMap, QuestionMap, MethodsMap };
+const LeetCodeMap = {
+  1: "/MarkDown/LeetCodeMarkdown/leetCode-1.md",
+  2: "/MarkDown/LeetCodeMarkdown/leetCode-7.md",
+  3: "/MarkDown/LeetCodeMarkdown/leetCode-9.md",
+  4: "/MarkDown/LeetCodeMarkdown/leetCode-14.md",
+  5: "/MarkDown/LeetCodeMarkdown/leetCode-20.md",
+  6: "/MarkDown/LeetCodeMarkdown/leetCode-26.md",
+  7: "/MarkDown/LeetCodeMarkdown/leetCode-27.md",
+  8: "/MarkDown/LeetCodeMarkdown/leetCode-28.md",
+  9: "/MarkDown/LeetCodeMarkdown/leetCode-35.md",
+  10: "/MarkDown/LeetCodeMarkdown/leetCode-38.md"
+};
+export {
+  CSSMap,
+  VueMap,
+  ReactMap,
+  WxMap,
+  QuestionMap,
+  MethodsMap,
+  LeetCodeMap
+};

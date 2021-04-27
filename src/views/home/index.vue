@@ -7,6 +7,7 @@
       <router-link to="/css">CSS</router-link>
       <router-link to="/question">Question</router-link>
       <router-link to="/methods">Methods</router-link>
+      <router-link to="/leetCode">LeetCode</router-link>
     </div>
     <div class="body">
       <div class="banner-wrap">
@@ -51,7 +52,7 @@ export default {
   components: {},
   computed: {
     ...mapGetters({
-      screenWidth: "getScreenWidth"
+      screenWidth: "getScreenWidth",
     }),
     bannerHeight() {
       return this.screenWidth >= 768 ? "500px" : "300px";
@@ -61,7 +62,7 @@ export default {
     },
     indicatorPosition() {
       return this.screenWidth >= 768 ? "" : "none";
-    }
+    },
   },
   data() {
     return {
@@ -69,15 +70,15 @@ export default {
       currentPage: "vue", // 当前所在页
       imgList: [
         {
-          img: require("../../assets/home/banner1.jpg")
+          img: require("../../assets/home/banner1.jpg"),
         },
         {
-          img: require("../../assets/home/banner2.jpg")
+          img: require("../../assets/home/banner2.jpg"),
         },
         {
-          img: require("../../assets/home/banner3.jpg")
-        }
-      ]
+          img: require("../../assets/home/banner3.jpg"),
+        },
+      ],
     };
   },
   watch: {
@@ -105,7 +106,7 @@ export default {
           break;
       }
       console.log("当前页面：", this.currentPage);
-    }
+    },
   },
   methods: {
     search() {
@@ -115,8 +116,8 @@ export default {
     },
     goRouter() {
       this.$router.push("/friend");
-    }
-  }
+    },
+  },
 };
 </script>
 
