@@ -223,12 +223,20 @@ const leetCodeList = [
     id: 5,
     type: "leetCode",
     img: require("../assets/img/leetCode.png"),
+    title: "LeetCode #20",
+    author: "wf",
+    desc: "有效的括号"
+  },
+  {
+    id: 6,
+    type: "leetCode",
+    img: require("../assets/img/leetCode.png"),
     title: "LeetCode #26",
     author: "wf",
     desc: "删除有序数组中的重复项"
   },
   {
-    id: 6,
+    id: 7,
     type: "leetCode",
     img: require("../assets/img/leetCode.png"),
     title: "LeetCode #27",
@@ -236,7 +244,7 @@ const leetCodeList = [
     desc: "移除元素"
   },
   {
-    id: 7,
+    id: 8,
     type: "leetCode",
     img: require("../assets/img/leetCode.png"),
     title: "LeetCode #28",
@@ -244,7 +252,7 @@ const leetCodeList = [
     desc: "实现 strStr()"
   },
   {
-    id: 8,
+    id: 9,
     type: "leetCode",
     img: require("../assets/img/leetCode.png"),
     title: "LeetCode #35",
@@ -252,20 +260,12 @@ const leetCodeList = [
     desc: "搜索插入位置"
   },
   {
-    id: 9,
+    id: 10,
     type: "leetCode",
     img: require("../assets/img/leetCode.png"),
     title: "LeetCode #38",
     author: "wf",
     desc: "两数之和"
-  },
-  {
-    id: 10,
-    type: "leetCode",
-    img: require("../assets/img/leetCode.png"),
-    title: "LeetCode #1",
-    author: "wf",
-    desc: "外观数列"
   }
 ];
 export {

@@ -3,7 +3,7 @@
     <div class="nav">
       <router-link to="/vue">Vue</router-link>
       <router-link to="/react">React</router-link>
-      <router-link to="/wx">微信小程序</router-link>
+      <router-link to="/wx">Mini Program</router-link>
       <router-link to="/css">CSS</router-link>
       <router-link to="/question">Question</router-link>
       <router-link to="/methods">Methods</router-link>
@@ -52,7 +52,7 @@ export default {
   components: {},
   computed: {
     ...mapGetters({
-      screenWidth: "getScreenWidth",
+      screenWidth: "getScreenWidth"
     }),
     bannerHeight() {
       return this.screenWidth >= 768 ? "500px" : "300px";
@@ -62,7 +62,7 @@ export default {
     },
     indicatorPosition() {
       return this.screenWidth >= 768 ? "" : "none";
-    },
+    }
   },
   data() {
     return {
@@ -70,15 +70,15 @@ export default {
       currentPage: "vue", // 当前所在页
       imgList: [
         {
-          img: require("../../assets/home/banner1.jpg"),
+          img: require("../../assets/home/banner1.jpg")
         },
         {
-          img: require("../../assets/home/banner2.jpg"),
+          img: require("../../assets/home/banner2.jpg")
         },
         {
-          img: require("../../assets/home/banner3.jpg"),
-        },
-      ],
+          img: require("../../assets/home/banner3.jpg")
+        }
+      ]
     };
   },
   watch: {
@@ -106,18 +106,17 @@ export default {
           break;
       }
       console.log("当前页面：", this.currentPage);
-    },
+    }
   },
   methods: {
     search() {
       console.log("搜索的关键字：", this.keyword);
       console.log("当前页面：", this.currentPage);
-      // 根据不同页面进行接口请求
     },
     goRouter() {
       this.$router.push("/friend");
-    },
-  },
+    }
+  }
 };
 </script>
 

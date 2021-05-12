@@ -1,20 +1,24 @@
 <template>
   <div class="article">
     <div class="content" v-highlight v-html="text"></div>
-    <A v-show="this.$route.query.id === 5 && this.$route.query.type == 'vue'"></A>
-    <Sign v-show="this.$route.query.id === 6 && this.$route.query.type == 'vue'"></Sign>
+    <A v-if="this.$route.query.id == 5 && this.$route.query.type == 'vue'"></A>
+    <Sign
+      v-if="this.$route.query.id == 6 && this.$route.query.type == 'vue'"
+    ></Sign>
     <WaterDrop
-      v-show="this.$route.query.id === 5 && this.$route.query.type == 'css'"
+      v-if="this.$route.query.id == 5 && this.$route.query.type == 'css'"
     ></WaterDrop>
     <FaultButton
-      v-show="this.$route.query.id === 6 && this.$route.query.type == 'css'"
+      v-if="this.$route.query.id == 6 && this.$route.query.type == 'css'"
     ></FaultButton>
     <BorderStyle
-      v-show="this.$route.query.id === 7 && this.$route.query.type == 'css'"
+      v-if="this.$route.query.id == 7 && this.$route.query.type == 'css'"
     ></BorderStyle>
-    <Range v-show="this.$route.query.id === 8 && this.$route.query.type == 'css'"></Range>
+    <Range
+      v-if="this.$route.query.id == 8 && this.$route.query.type == 'css'"
+    ></Range>
     <CountDown
-      v-show="this.$route.query.id === 9 && this.$route.query.type == 'css'"
+      v-if="this.$route.query.id == 9 && this.$route.query.type == 'css'"
     ></CountDown>
     <div class="link">
       <div class="linkItem" @click="readArticle('last')">
@@ -40,7 +44,7 @@ import {
   WxMap,
   QuestionMap,
   MethodsMap,
-  LeetCodeMap,
+  LeetCodeMap
 } from "@/common/dict.js";
 import {
   cssList,
@@ -49,7 +53,7 @@ import {
   reactList,
   vueList,
   wxList,
-  leetCodeList,
+  leetCodeList
 } from "@/data/allData.js";
 import BorderStyle from "./css/BorderStyle";
 import CountDown from "./css/CountDown";
@@ -66,7 +70,7 @@ export default {
     CountDown,
     FaultButton,
     Range,
-    WaterDrop,
+    WaterDrop
   },
   watch: {
     $route(to, from) {
@@ -77,22 +81,22 @@ export default {
       this.getArticleTitle();
       console.log("to:", to);
       console.log("文章详情...");
-    },
+    }
   },
   data() {
     return {
       text: "",
       lastArticle: {
         id: "654321",
-        title: "没有上一篇",
+        title: "没有上一篇"
       },
       nextArticle: {
         id: "789456",
-        title: "没有下一篇",
+        title: "没有下一篇"
       },
       id: 0,
       articleData: {}, // 文章数据
-      articleTitleList: [], // 获取文章标题
+      articleTitleList: [] // 获取文章标题
     };
   },
   mounted() {
@@ -111,7 +115,7 @@ export default {
         wx: WxMap,
         question: QuestionMap,
         method: MethodsMap,
-        leetCode: LeetCodeMap,
+        leetCode: LeetCodeMap
       };
       // 获取markdown地址
       this.articleData = list[type][this.$route.query.id];
@@ -119,7 +123,7 @@ export default {
     show() {
       // 拿到markdown数据
       let url = this.articleData;
-      axios.get(url).then((res) => {
+      axios.get(url).then(res => {
         if (res.status === 200) {
           this.getData(res.data);
         }
@@ -136,7 +140,7 @@ export default {
         wx: wxList,
         question: questionList,
         method: methodList,
-        leetCode: leetCodeList,
+        leetCode: leetCodeList
       };
       this.articleTitleList = articleList[type];
       this.articleTitleList.map((item, index) => {
@@ -165,7 +169,7 @@ export default {
         ghCodeBlocks: true, // 支持代码块格式
         splitAdjacentBlockquotes: true, // 拆分相邻块Quote块
         openLinksInNewWindow: true, // 链接到新窗口
-        tasklists: true, // 支持任务列表
+        tasklists: true // 支持任务列表
       });
       this.text = converter.makeHtml(markDownText);
     },
@@ -180,11 +184,11 @@ export default {
         param == "last" ? (id -= 1) : (id += 1);
         this.$router.push({
           path: "/zone/article",
-          query: { id: id, type: type },
+          query: { id: id, type: type }
         });
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
