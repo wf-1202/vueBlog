@@ -41,15 +41,19 @@
       <transition>
         <router-view />
       </transition>
+      <Tools />
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import Tools from "./Tools";
 export default {
   name: "Home",
-  components: {},
+  components: {
+    Tools
+  },
   computed: {
     ...mapGetters({
       screenWidth: "getScreenWidth"

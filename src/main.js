@@ -11,7 +11,8 @@ import {
   TimelineItem,
   Card,
   Input,
-  Drawer
+  Drawer,
+  Button
 } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import './css/index.scss'
@@ -31,6 +32,7 @@ Vue.component(TimelineItem.name, TimelineItem)
 Vue.component(Card.name, Card)
 Vue.component(Input.name, Input)
 Vue.component(Drawer.name, Drawer)
+Vue.component(Button.name, Button)
 new Vue({
   router,
   store,
