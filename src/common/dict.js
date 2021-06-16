@@ -65,7 +65,10 @@ const QuestionMap = {
 // MethodsMap.set(2, "/MarkDown/MethodsMarkdown/scroll.md");
 const MethodsMap = {
   1: "/MarkDown/MethodsMarkdown/storage.md",
-  2: "/MarkDown/MethodsMarkdown/scroll.md"
+  2: "/MarkDown/MethodsMarkdown/gitFork.md",
+  3: "/MarkDown/MethodsMarkdown/copy.md",
+  4: "/MarkDown/MethodsMarkdown/this.md",
+  5: "/MarkDown/MethodsMarkdown/debounceAndThrottle.md"
 };
 const LeetCodeMap = {
   1: "/MarkDown/LeetCodeMarkdown/leetCode-1.md",

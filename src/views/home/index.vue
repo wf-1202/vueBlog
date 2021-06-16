@@ -41,7 +41,7 @@
       <transition>
         <router-view />
       </transition>
-      <Tools />
+      <Tools v-show="screenWidth > 768" />
     </div>
   </div>
 </template>
